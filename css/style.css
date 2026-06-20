@@ -281,3 +281,18 @@ button {
   border-radius: 22px;
   background-color: var(--soft);
 }
+/* Chặng 8: CSS Grid cho thư viện/danh sách nội dung */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.portfolio-grid article {
+  min-height: 120px;
+  padding: 24px;
+  border-radius: 22px;
+  background-color: #ffffff;
+  border: 1px solid #dbe3ef;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.07);
+}
