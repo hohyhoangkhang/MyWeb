@@ -224,3 +224,31 @@
   background-color: #ffffff;
   box-shadow: 0 14px 35px rgba(15, 23, 42, 0.08);
 }
+/* Chặng 6: ảnh, liên kết, nút và trạng thái hover */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 18px;
+}
+
+.image-strip figure {
+  margin: 0 0 20px;
+  padding: 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 24px;
+  background-color: white;
+}
+
+.main-nav a:hover, .primary-button:hover, button:hover {
+  opacity: 0.86;
+  transform: translateY(-1px);
+}
+
+button {
+  padding: 12px 18px;
+  border: 0;
+  border-radius: 14px;
+  color: white;
+  background-color: var(--primary);
+}
