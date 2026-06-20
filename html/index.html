@@ -110,11 +110,19 @@
     </div>
   </section>
 
-  <section class="contact">
+  <footer>
+  <section class="section contact-section" id="contact">
     <h2>Liên hệ</h2>
-    <p>Mọi góp ý vui lòng gửi qua email: example@email.com</p>
+    <form class="contact-form" action="#" method="post">
+      <label for="fullName">Họ tên</label>
+      <input id="fullName" name="fullName" type="text" placeholder="Nhập họ tên">
+      <label for="message">Thông điệp</label>
+      <textarea id="message" name="message" rows="4" placeholder="Nội dung liên hệ"></textarea>
+      <button type="submit">Gửi thông tin</button>
+    </form>
   </section>
-
+  </footer>
+  
 </main>
 </body>
 </html>
