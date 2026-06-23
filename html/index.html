@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MyWeb</title>
-  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <header class ="site-header">
@@ -20,6 +20,7 @@
 </header>
 
 <main>
+  <input id="searchInput" type="text" placeholder="Tìm kiếm nội dung...">
   <section class="hero">
     <h1>Tin Học Là Gì?</h1>
     <p>Tin học là ngành khoa học nghiên cứu về việc thu thập, xử lý, lưu trữ và truyền tải thông tin bằng máy tính điện tử.</p>
@@ -31,10 +32,10 @@
   <section class="topic-list">
     <h2>Các lĩnh vực chính</h2>
     <ul>
-      <li>Phần cứng (Hardware): các thiết bị vật lý như CPU, RAM, ổ cứng.</li>
-      <li>Phần mềm (Software): các chương trình điều khiển máy tính hoạt động.</li>
-      <li>Mạng máy tính: kết nối và truyền thông tin giữa các thiết bị.</li>
-      <li>Lập trình: viết mã để tạo ra các ứng dụng và phần mềm.</li>
+      <li class="search-item">Phần cứng (Hardware): các thiết bị vật lý như CPU, RAM, ổ cứng.</li>
+      <li class="search-item">Phần mềm (Software): các chương trình điều khiển máy tính hoạt động.</li>
+      <li class="search-item">Mạng máy tính: kết nối và truyền thông tin giữa các thiết bị.</li>
+      <li class="search-item">Lập trình: viết mã để tạo ra các ứng dụng và phần mềm.</li>
     </ul>
 
     <h2>Vai trò của tin học</h2>
@@ -78,18 +79,24 @@
    <section class="section feature-section" id="features">
     <h2>Nội dung nổi bật</h2>
     <div class="card-row">
-      <article class="feature-card"><h3>Mục 1</h3><p>Linux kernel 7.0 chính thức phát hành với nhiều cải tiến bảo mật</p></article>
-      <article class="feature-card"><h3>Mục 2</h3><p>Docker ra mắt tính năng tự động tối ưu container theo workload</p></article>
-      <article class="feature-card"><h3>Mục 3</h3><p>GitHub Copilot hỗ trợ hơn 30 ngôn ngữ lập trình trong bản cập nhật mới</p></article>
+      <article class="feature-card search-item"><h3>Mục 1</h3><p>Linux kernel 7.0 chính thức phát hành với nhiều cải tiến bảo mật</p></article>
+      <article class="feature-card search-item"><h3>Mục 2</h3><p>Docker ra mắt tính năng tự động tối ưu container theo workload</p></article>
+      <article class="feature-card search-item"><h3>Mục 3</h3><p>GitHub Copilot hỗ trợ hơn 30 ngôn ngữ lập trình trong bản cập nhật mới</p></article>
     </div>
   </section>
 
   <section class="section gallery-section" id="gallery">
     <h2>Thư viện ảnh</h2>
+    <div class="filter-bar">
+      <button class="filter-btn" data-filter="all">Tất cả</button>
+      <button class="filter-btn" data-filter="hero">Hero</button>
+      <button class="filter-btn" data-filter="detail1">Detail 1</button>
+      <button class="filter-btn" data-filter="detail2">Detail 2</button>
+    </div>
     <div class="image-strip">
-      <figure><img src="../img/hero.jpg" alt="Ảnh chính của chủ đề"><figcaption>Ảnh chính</figcaption></figure>
-      <figure><img src="img/detail1.jpg" alt="Chi tiết 1 của chủ đề"><figcaption>Chi tiết 1</figcaption></figure>
-      <figure><img src="img/detail2.jpg" alt="Chi tiết 2 của chủ đề"><figcaption>Chi tiết 2</figcaption></figure>
+      <article class="gallery-item" data-category="hero"><img src="img/hero.jpg" alt="Ảnh hero"><figcaption>Hero</figcaption></article>
+      <article class="gallery-item" data-category="detail1"><img src="img/detail1.jpg" alt="Ảnh detail 1"><figcaption>Detail 1</figcaption></article>
+      <article class="gallery-item" data-category="detail2"><img src="img/detail2.jpg" alt="Ảnh detail 2"><figcaption>Detail 2</figcaption></article>
     </div>
   </section>
   
@@ -106,24 +113,27 @@
   <section class="section portfolio-section" id="portfolio">
     <h2>Lưới nội dung</h2>
     <div class="portfolio-grid">
-      <article>Phát triển phần mềm/ứng dụng</article>
-      <article>Trí tuệ nhân tạo (AI) và Dữ liệu lớn (Big Data)</article>
-      <article>Hạ tầng và Điện toán đám mây</article>
-      <article>An toàn thông tin</article>
-      <article>Công nghệ quản lý khách sạn trên Web App</article>
-      <article>Động cơ điện thông minh dạng module cho xe lăn</article>
+      <article class="search-item">Phát triển phần mềm/ứng dụng</article>
+      <article class="search-item">Trí tuệ nhân tạo (AI) và Dữ liệu lớn (Big Data)</article>
+      <article class="search-item">Hạ tầng và Điện toán đám mây</article>
+      <article class="search-item">An toàn thông tin</article>
+      <article class="search-item">Công nghệ quản lý khách sạn trên Web App</article>
+      <article class="search-item">Động cơ điện thông minh dạng module cho xe lăn</article>
     </div>
   </section>
 
   <footer>
   <section class="section contact-section" id="contact">
     <h2>Liên hệ</h2>
-    <form class="contact-form" action="#" method="post">
+    <form class="contact-form" id="contactForm" action="#" method="post">
       <label for="fullName">Họ tên</label>
       <input id="fullName" name="fullName" type="text" placeholder="Nhập họ tên">
+      <label for="email">Email</label>
+      <input id="email" name="email" type="text" placeholder="Nhập email">
       <label for="message">Thông điệp</label>
       <textarea id="message" name="message" rows="4" placeholder="Nội dung liên hệ"></textarea>
       <button type="submit">Gửi thông tin</button>
+      <p id="formMessage"></p>
     </form>
   </section>
   </footer>
@@ -135,6 +145,6 @@
 </select>
   
 </main>
-  <script src="../js/script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
