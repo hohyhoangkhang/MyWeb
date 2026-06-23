@@ -34,16 +34,22 @@ body {
 
 .site-header h1 { font-size: 22px; }
 
-.main-nav { display: flex; gap: 20px; }
+#mainMenu {
+  gap: 20px;
+}
 
-.main-nav a {
+#mainMenu.active {
+  display: flex;
+}
+
+#mainMenu a {
   color: white;
   text-decoration: none;
   margin-left: 20px;
   font-size: 15px;
 }
 
-.main-nav a:hover,
+#mainMenu a:hover,
 .primary-button:hover,
 button:hover {
   opacity: 0.86;
