@@ -239,3 +239,12 @@ input, textarea {
 .main-menu.active {
   display: block;
 }
+body.dark-mode {
+  background-color: #1a1a2e;
+  color: #eee;
+}
+
+body.warm-mode {
+  background-color: #fff8f0;
+  color: #5a3e28;
+}
