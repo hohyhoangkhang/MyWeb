@@ -14,3 +14,11 @@ if (mainTitle && welcomeText) {
   mainTitle.textContent = "MyWeb đã có JavaScript!";
   welcomeText.textContent = "Nội dung này được cập nhật bằng file js/script.js.";
 }
+const helloBtn = document.getElementById("helloBtn");
+const helloResult = document.getElementById("helloResult");
+
+if (helloBtn && helloResult) {
+  helloBtn.addEventListener("click", function () {
+    helloResult.textContent = "Cảm ơn bạn đã ghé thăm MyWeb!";
+  });
+}
