@@ -29,3 +29,10 @@ if (toggleAboutBtn && aboutContent) {
     aboutContent.classList.toggle("hidden");
   });
 }
+const menuToggle = document.getElementById("menuToggle");
+const mainMenu = document.getElementById("mainMenu");
+if (menuToggle && mainMenu) {
+  menuToggle.addEventListener("click", function () {
+    mainMenu.classList.toggle("active");
+  });
+}
