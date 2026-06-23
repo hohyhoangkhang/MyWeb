@@ -22,3 +22,10 @@ if (helloBtn && helloResult) {
     helloResult.textContent = "Cảm ơn bạn đã ghé thăm MyWeb!";
   });
 }
+const toggleAboutBtn = document.getElementById("toggleAboutBtn");
+const aboutContent = document.getElementById("aboutContent");
+if (toggleAboutBtn && aboutContent) {
+  toggleAboutBtn.addEventListener("click", function () {
+    aboutContent.classList.toggle("hidden");
+  });
+}
